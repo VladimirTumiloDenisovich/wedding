@@ -1,3 +1,3 @@
 # wedding
 
-https://vladimirtumilodenisovich.github.io/wedding/index/
+[сайтик](https://vladimirtumilodenisovich.github.io/wedding/)
