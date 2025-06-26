@@ -42,9 +42,13 @@ body {
 .polaroid {
   background-color: var(--polaroid-color);
   color: var(--polaroid-text-color);
-  padding: 20px 0px 30px;
+  padding: 5% 0% 10%;
   border-radius: 1%;
-  margin: 10px 100px 30px;
+  margin: 0% 0% 10%;
+}
+
+.map {
+  border-radius: 1.5%;
 }
 
 .invitation-card {
