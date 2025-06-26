@@ -1,23 +1,26 @@
 :root {
-  --bg-color: #f9f3e9;
+  --bg-color: #fcedfb;
+  --bg-footer-color: #dfe6f0;
   --text-color: #333;
   --accent-color: #8b7355;
-  --card-bg: #fff;
+  --card-bg: #fdf6fd;
   --border-color: #e0d5c0;
-  --highlight-color: #d4b483
-  --polaroid-color: #f9f3e9;
+  --highlight-color: #d4b483;
+  --polaroid-color: #ffffff;
   --polaroid-text-color: #222;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
       --bg-color: #1a1a1a;
-      --text-color: #e0e0e0;
+      --bg-footer-color: #81968c;
+      --text-color: #333;
+      --text-color-header: #e0e0e0;
       --accent-color: #c9b18d;
-      --card-bg: #2a2a2a;
+      --card-bg: #fdf6fd;
       --border-color: #444;
       --highlight-color: #e0c9a0;
-      --polaroid-color: #f9f3e9;
+      --polaroid-color: #ffffff;
       --polaroid-text-color: #222;
   }
 }
@@ -34,7 +37,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -42,13 +45,44 @@ body {
 .polaroid {
   background-color: var(--polaroid-color);
   color: var(--polaroid-text-color);
-  padding: 5% 0% 10%;
+  padding: 5% 5% 10%;
   border-radius: 1%;
-  margin: 0% 0% 10%;
+  margin: 0;
 }
 
 .map {
   border-radius: 1.5%;
+}
+
+.plus {
+  font-size: 6em;
+  font-family: 'Marck Script', cursive;
+  color: var(--accent-color);
+}
+
+.footer {
+  background-color: var(--bg-footer-color);
+}
+
+.image-gallery {
+  display: flex;          /* Включаем flex-контейнер */
+  flex-wrap: wrap;        /* Разрешаем перенос на новую строку */
+  justify-content: center; /* Выравнивание по центру */
+  align-items: center;    /* Выравнивание по вертикали */
+  gap: 20px;             /* Расстояние между элементами */
+  margin: 0px 0;        /* Отступы сверху и снизу */
+}
+
+.image-gallery img {
+  max-width: 300px;      /* Максимальная ширина изображения */
+  height: auto;          /* Сохраняем пропорции */
+  border-radius: 8px;    /* Скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+  transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.4); /* Увеличение при наведении */
 }
 
 .invitation-card {
@@ -68,25 +102,41 @@ body {
 }
 
 .header {
+  color: var(--text-color-header);
   text-align: center;
   margin-bottom: 40px;
   padding-top: 20px;
 }
 
 .date {
-  font-size: 24px;
+  font-family: 'Playpen sans';
+  font-size: 6ch;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.date-h2 {
+  font-family: 'Playpen sans';
+  font-size: 4cap;
   font-weight: bold;
   margin-bottom: 10px;
   color: var(--accent-color);
 }
 
 .title {
-  font-size: 20px;
+  font-size: 3cap;
   margin-bottom: 30px;
   font-family: 'Marck Script', cursive;
 }
 
+.title-polaroid {
+  font-size: 3em;
+  margin: 2% 0 0;
+  font-family: 'Marck Script', cursive;
+}
+
 .countdown {
+  font-family: 'Playpen sans';
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -103,13 +153,13 @@ body {
 }
 
 .countdown-item span:first-child {
-  font-size: 28px;
+  font-size: 3cap;
   font-weight: bold;
   color: var(--accent-color);
 }
 
 .countdown-item span:last-child {
-  font-size: 14px;
+  font-size: 2cap;
 }
 
 .main-content {
@@ -143,8 +193,8 @@ body {
 
 .divider {
   background-color: var(--polaroid-color);
-  width: 80%;
-  margin: 0px auto;
+  width: 90%;
+  margin: 0px auto 5%;
   display: block;
   
 }
