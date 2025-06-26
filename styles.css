@@ -2,7 +2,7 @@
   --bg-color: #fcedfb;
   --bg-footer-color: #dfe6f0;
   --text-color: #333;
-  --accent-color: #8b7355;
+  --accent-color: #57313f;
   --card-bg: #fdf6fd;
   --border-color: #e0d5c0;
   --highlight-color: #d4b483;
@@ -10,7 +10,7 @@
   --polaroid-text-color: #222;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
       --bg-color: #1a1a1a;
       --bg-footer-color: #81968c;
@@ -23,10 +23,10 @@
       --polaroid-color: #ffffff;
       --polaroid-text-color: #222;
   }
-}
+} */
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', cursive;
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
@@ -45,7 +45,7 @@ body {
 .polaroid {
   background-color: var(--polaroid-color);
   color: var(--polaroid-text-color);
-  padding: 5% 5% 10%;
+  padding: 5%;
   border-radius: 1%;
   margin: 0;
 }
@@ -58,6 +58,7 @@ body {
   font-size: 6em;
   font-family: 'Marck Script', cursive;
   color: var(--accent-color);
+  margin: 0;
 }
 
 .footer {
@@ -79,10 +80,6 @@ body {
   border-radius: 8px;    /* Скругленные углы */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
   transition: transform 0.3s ease; /* Плавное увеличение при наведении */
-}
-
-.image-gallery img:hover {
-  transform: scale(1.4); /* Увеличение при наведении */
 }
 
 .invitation-card {
@@ -109,14 +106,14 @@ body {
 }
 
 .date {
-  font-family: 'Playpen sans';
+  font-family: 'Montserrat', cursive;
   font-size: 6ch;
   margin-bottom: 10px;
   color: var(--accent-color);
 }
 
 .date-h2 {
-  font-family: 'Playpen sans';
+  font-family: 'Montserrat', cursive;
   font-size: 4cap;
   font-weight: bold;
   margin-bottom: 10px;
@@ -129,6 +126,19 @@ body {
   font-family: 'Marck Script', cursive;
 }
 
+.title-h2 {
+  font-size: 5em;
+  margin: 0;
+  font-family: 'Marck Script', cursive;
+}
+
+.title-mont-h2 {
+  font-size: 1.2em;
+  margin: 5% 0 0;
+  font-family: 'Montserrat', cursive;
+  letter-spacing: 1em;
+}
+
 .title-polaroid {
   font-size: 3em;
   margin: 2% 0 0;
@@ -136,7 +146,7 @@ body {
 }
 
 .countdown {
-  font-family: 'Playpen sans';
+  font-family: 'Montserrat', cursive;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -164,11 +174,11 @@ body {
 
 .main-content {
   margin-bottom: 40px;
+  padding: 0 15%;
 }
 
 .invitation {
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .invitation h1 {
@@ -183,8 +193,7 @@ body {
 }
 
 .details {
-  margin-top: 30px;
-  font-size: 18px;
+  font-family: 'Montserrat', cursive;
 }
 
 .details p {
@@ -200,20 +209,22 @@ body {
 }
 
 .menu-info {
+  font-size: 18px;
   margin-bottom: 40px;
   text-align: center;
 }
 
-.menu-info h2 {
+/* .menu-info h2 {
   font-size: 18px;
   margin-bottom: 15px;
-}
+} */
 
 .notes {
   background-color: rgba(139, 115, 85, 0.1);
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 30px;
+  font-family: 'Montserrat', cursive;
 }
 
 .notes h2 {
@@ -241,7 +252,7 @@ body {
 }
 
 .survey-link {
-  margin-top: 20px;
+  margin: 40px 0;
 }
 
 .survey-btn {
@@ -251,10 +262,11 @@ body {
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.6em;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
+  font-family: 'Montserrat', cursive;
 }
 
 .survey-btn:hover {
@@ -291,6 +303,103 @@ body {
   font-size: 12px;
   color: #666;
 }
+
+
+.schedule-block {
+  font-family: 'Montserrat', cursive;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--bg-footer-color);
+}
+
+.schedule-title {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.event {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.event-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  padding: 10px;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+}
+
+.time {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.footer-date {
+  font-size: 14px;
+  color: var(--accent-color);
+}
+
+.event-details {
+  flex: 1;
+}
+
+.event-location {
+  margin: 0 0 5px 0;
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.event-address {
+  margin: 0 0 10px 0;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.event-description {
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.event-divider {
+  margin: 25px 0;
+  opacity: 0.6;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .schedule-block {
+      padding: 20px;
+  }
+  
+  .event {
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  .event-time {
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+  }
+  
+  .time {
+      font-size: 20px;
+  }
+}
+
+
+
+
 
 @media (max-width: 600px) {
   .container {
